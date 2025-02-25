@@ -19,10 +19,7 @@ mainContainer.addEventListener("click",(e)=>{
         }else{
             completedTaskBar.style.paddingLeft = "1.5rem"
         }
-        
-        
     }
-    // console.dir(e.target);
 })
 
 let arr = []
