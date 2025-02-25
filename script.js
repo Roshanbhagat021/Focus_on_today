@@ -7,7 +7,7 @@ const completedTaskBar = document.querySelector(".show-completed")
 
 
 mainContainer.addEventListener("click",(e)=>{
-    if(e.target.classList[0] == "is-completed" && e.target.nextElementSibling.value){
+    if(e.target.classList[0] == "is-completed" && e.target.nextElementSibling.value && checkIsAllInputFilled()){
         // console.dir(e.target.classList);
         e.target.classList.toggle("completed")
         e.target.nextElementSibling.classList.toggle("green-text")
