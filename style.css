@@ -12,6 +12,27 @@ h1{
     margin-block: 1rem;
 }
 
+.sun{
+    position: relative;
+}
+
+.sun img:nth-child(1){
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate{
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.smile-image{
+    width: 12px;
+     position: absolute;
+     left: 20px;
+     top: 21px;
+}
+
 .raise-bar-text{
     font-size: 14px;
     color: rgba(133, 133, 133, 1);
@@ -59,7 +80,7 @@ h1{
 
 main{
     width: 95vw;
-    padding: 1.5rem;
+    padding: 1rem;
     max-width: 660px;
     margin: auto;
     background-color: rgba(251, 251, 251, 1);
@@ -82,6 +103,7 @@ main{
     height: 24px;
     border-radius: 100%;
     border: 2px solid rgba(97, 72, 28, 0.3);
+    cursor: pointer;
 }
 
 .completed{
@@ -93,28 +115,29 @@ main{
     background-image: url("assets/tickmark.svg");
     background-size: cover;
     background-position: center;
-    border: 2px solid rgba(97, 72, 28, 0.3);
+}
+
+.completed ~input{
+    color: #48A300;
+    text-decoration: line-through;
 }
 
 .hidden{
     visibility: hidden;
 }
 
-.green-text{
-    color: #48A300;
-    text-decoration: line-through;
-    text-decoration-thickness: 4px;
+.input-container{
+    height: 82px;
 }
 
 .input-container input{
-    padding: 1.2rem;
     outline: none;
     border: none;
     width: 100%;
     border-radius: 17px;
-    /* color: rgba(217, 217, 217, 1); */
     font-weight: 500;
-    
+    align-self: stretch;
+    padding-left: 1rem;
 }
 
 .input-container input::placeholder{
@@ -134,3 +157,21 @@ h3{
     font-size: 10px;
 }
 
+
+@media (max-width:768px){
+    h1{
+        font-size: 44px;
+    }
+    .input-container{
+        height: 52px;
+    }
+    .alert{
+        font-size: 8px;
+    }
+
+    .input-container{
+        margin-bottom: 1rem;
+    }
+    .bar{
+        height: 20px;}
+}
